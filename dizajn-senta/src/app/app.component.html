@@ -30,24 +30,33 @@
     <router-outlet></router-outlet>
   </main>
 
-  <aside class="about">
-    <div class="about__container">
-      <article>
-        <h2 class="about__title">{{ t('about.1.title') }}</h2>
-        <p class="about__text">{{ t('about.1.text') }}</p>
-      </article>
-      <article>
-        <h2 class="about__title">{{ t('about.2.title') }}</h2>
-        <p class="about__text">{{ t('about.2.text') }}</p>
-      </article>
-      <article>
-        <h2 class="about__title">{{ t('about.3.title') }}</h2>
-        <p class="about__text">{{ t('about.3.text') }}</p>
-      </article>
-      <p><a [routerLink]="[currentLang != 'sl' ? currentLang : '', 'o-projektu']"
-            class="about__link">{{ t('about_project') }}</a></p>
-    </div>
-  </aside>
+	<aside class="about">
+	  <div class="about__container">
+		<article>
+		  <h2 class="about__title">{{ t('about.1.title') }}</h2>
+		  <p class="about__text">{{ t('about.1.text') }}</p>
+		</article>
+		<article>
+		  <h2 class="about__title">{{ t('about.2.title') }}</h2>
+		  <p class="about__text">{{ t('about.2.text') }}</p>
+		</article>
+		<article>
+		  <h2 class="about__title">{{ t('about.3.title') }}</h2>
+		  <p class="about__text">{{ t('about.3.text') }}</p>
+		</article>
+		<p>
+		  <a
+			[routerLink]="[currentLang != 'sl' ? currentLang : '', 'o-projektu']"
+			class="about__link"
+			>{{ t('about_project') }}</a
+		  >
+		</p>
+		<!-- New info added here -->
+		<p class="about__text">Citiranje: <br><br>SENTA: povzemalnik besedil za slovenščino. https://senta.cjvt.si/, dostop dd. mm. llll. <br><br> Ljubljana, 2024 <br><br> Glavni uredniki: Aleš Žagar, Matej Klemen, Iztok Kosem, Marko Robnik-Šikonja <br><br> Izdajatelj:
+Center za jezikovne vire in tehnologije, Univerza v Ljubljani</p>
+	  </div>
+	</aside>
+
 
   <footer class="site-footer">
     <article class="site-footer__logos-container">
